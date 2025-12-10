@@ -1,48 +1,64 @@
-<?php
+<?php namespace App\Controllers\v1;
 
-namespace App\Controllers\v1;
-
-use App\Controllers\BaseController; // 基於 Anser-Gateway 的 BaseController
+use App\Controllers\BaseController;
+use CodeIgniter\API\ResponseTrait;
+use CodeIgniter\HTTP\IncomingRequest;
+use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
-use Config\RabbitMQ; // 假設你有一個設定檔
 
 class OrderController extends BaseController
 {
+    use ResponseTrait;
+
     public function create()
     {
-        // 1. 驗證請求 (Validate)
-        $data = $this->request->getJSON(true);
-        if (empty($data['user_id']) || empty($data['amount'])) {
-            return $this->fail('Invalid data', 400);
-        }
+        /** @var IncomingRequest $request */
+        $request = $this->request;
 
-        // 2. 封裝 Payload (Event Envelope 結構)
-        $requestId = bin2hex(random_bytes(16));
-        $jobPayload = json_encode([
-            'type'          => 'CreateOrderSaga',
-            'requestId'     => $requestId,
-            'occurredAt'    => date('c'),
-            'payload'       => $data,
-            'meta'          => [
-                'client_ip' => $this->request->getIPAddress(),
-                'user_agent'=> $this->request->getUserAgent()->getAgentString()
-            ]
+        // 1. 接收請求資料
+        $data = $request->getJSON(true) ?? [];
+        $traceId = $request->getHeaderLine('X-Correlation-ID') ?: uniqid('txn_', true);
+
+        // 2. 定義事件格式 (CloudEvents 規範)
+        $eventPayload = json_encode([
+            "specversion" => "1.0",
+            "type"        => "com.anser.order.create",
+            "source"      => "/gateway/order",
+            "id"          => $traceId,
+            "time"        => date(DATE_RFC3339),
+            "data"        => $data
         ]);
 
-        // 3. 推送到 Request Queue (Producer)
-        // 注意：這裡應該使用依賴注入獲取 RabbitMQ 連線
-        $connection = service('RabbitMQ'); 
-        $channel = $connection->channel();
-        $channel->queue_declare('anser_request_queue', false, true, false, false);
+        try {
+            // 3. 連接 RabbitMQ (注意：host 填 docker-compose 中的 service name)
+            $connection = new AMQPStreamConnection(
+                env('RABBITMQ_HOST', 'anser_rabbitmq'),
+                (int) env('RABBITMQ_PORT', 5672),
+                env('RABBITMQ_USER', 'guest'),
+                env('RABBITMQ_PASS', 'guest')
+            );
+            $channel = $connection->channel();
 
-        $msg = new AMQPMessage($jobPayload, ['delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]);
-        $channel->basic_publish($msg, '', 'anser_request_queue');
+            // 4. 宣告佇列 (確保佇列存在)
+            $channel->queue_declare('order_queue', false, true, false, false);
 
-        // 4. 快速回應 202 Accepted
-        return $this->respond([
-            'status' => 202,
-            'message' => 'Request accepted, processing in background.',
-            'request_id' => $requestId
-        ], 202);
+            // 5. 發送訊息
+            $msg = new AMQPMessage($eventPayload, ['delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]);
+            $channel->basic_publish($msg, '', 'order_queue');
+
+            $channel->close();
+            $connection->close();
+
+            // 6. 回傳「非同步」成功回應 (202 Accepted)
+            return $this->respond([
+                "status" => "Accepted",
+                "message" => "Order request queued for processing.",
+                "trace_id" => $traceId
+            ], 202);
+
+        } catch (\Exception $e) {
+            log_message('error', '[RabbitMQ Error] ' . $e->getMessage());
+            return $this->failServerError('Queue Service Unavailable');
+        }
     }
 }

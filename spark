@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Delegates to the real CodeIgniter spark entrypoint under event-gateway/spark.
+ * This keeps root-level `php spark ...` working while the app lives in /event-gateway.
+ */
+
+$sparkPath = __DIR__ . '/event-gateway/spark';
+
+if (!is_file($sparkPath)) {
+    fwrite(STDERR, "spark not found at {$sparkPath}. Run commands from the event-gateway directory instead.\n");
+    exit(1);
+}
+
+// Pass through to the actual spark script
+require $sparkPath;

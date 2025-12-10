@@ -1,4 +1,7 @@
-FROM webdevops/php:8.2-alpine
+FROM webdevops/php-nginx:8.2-alpine
+
+# Serve CodeIgniter from /app/public via nginx
+ENV WEB_DOCUMENT_ROOT=/app/public
 
 # 安裝必要的 PHP 擴充與依賴
 RUN apk add --no-cache \

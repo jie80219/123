@@ -31,6 +31,7 @@ services:
     container_name: anser_consul
     ports:
       - "8500:8500"
+      - "8600:8600/udp"
     networks:
       - anser_project_network
 

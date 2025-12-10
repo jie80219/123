@@ -5,4 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+
+// Health check
+$routes->get('/', 'v1\\HeartBeat::index');
+$routes->get('v1/heartbeat', 'v1\\HeartBeat::index');
+
+// Orders
+$routes->post('v1/order', 'v1\\OrderController::create');

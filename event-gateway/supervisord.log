@@ -1,0 +1,528 @@
+2025-12-09 17:50:25,554 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 17:50:25,554 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 17:50:25,555 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 17:50:25,561 INFO RPC interface 'supervisor' initialized
+2025-12-09 17:50:25,563 INFO supervisord started with pid 1
+2025-12-09 17:50:26,569 INFO spawned: 'syslogd' with pid 39
+2025-12-09 17:50:26,570 INFO spawned: 'php-fpmd' with pid 40
+2025-12-09 17:50:26,572 INFO spawned: 'crond' with pid 41
+2025-12-09 17:50:26,574 INFO spawned: 'request-consumer' with pid 42
+2025-12-09 17:50:26,610 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 17:50:26,611 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 17:50:26,842 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:27,972 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 17:50:27,973 INFO spawned: 'request-consumer' with pid 61
+2025-12-09 17:50:29,134 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 17:50:29,136 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:30,140 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 17:50:31,375 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 17:50:31,375 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:32,379 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 17:50:32,514 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:33,518 INFO spawned: 'request-consumer' with pid 64
+2025-12-09 17:50:33,677 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:35,691 INFO spawned: 'request-consumer' with pid 65
+2025-12-09 17:50:35,859 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:38,870 INFO spawned: 'request-consumer' with pid 66
+2025-12-09 17:50:40,043 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 17:50:40,045 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:41,053 INFO spawned: 'request-consumer' with pid 67
+2025-12-09 17:50:41,221 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:42,228 INFO spawned: 'request-consumer' with pid 68
+2025-12-09 17:50:42,395 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:44,403 INFO spawned: 'request-consumer' with pid 69
+2025-12-09 17:50:44,571 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:47,583 INFO spawned: 'request-consumer' with pid 70
+2025-12-09 17:50:47,746 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 17:50:48,750 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-09 17:59:11,963 WARN received SIGQUIT indicating exit request
+2025-12-09 17:59:11,965 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 17:59:14,984 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 17:59:14,989 WARN stopped: crond (terminated by SIGTERM)
+2025-12-09 17:59:16,068 INFO stopped: php-fpmd (exit status 0)
+2025-12-09 17:59:18,218 INFO stopped: syslogd (exit status 0)
+2025-12-09 18:05:00,698 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 18:05:00,698 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 18:05:00,699 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 18:05:00,703 INFO RPC interface 'supervisor' initialized
+2025-12-09 18:05:00,708 INFO supervisord started with pid 1
+2025-12-09 18:05:01,711 INFO spawned: 'syslogd' with pid 38
+2025-12-09 18:05:01,713 INFO spawned: 'php-fpmd' with pid 39
+2025-12-09 18:05:01,714 INFO spawned: 'crond' with pid 40
+2025-12-09 18:05:01,715 INFO spawned: 'request-consumer' with pid 41
+2025-12-09 18:05:01,735 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:05:01,735 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:05:01,921 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:02,972 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:05:02,973 INFO spawned: 'request-consumer' with pid 60
+2025-12-09 18:05:04,138 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:05:04,139 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:05,141 INFO spawned: 'request-consumer' with pid 61
+2025-12-09 18:05:05,316 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:06,322 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 18:05:06,503 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:08,510 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 18:05:08,679 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:11,691 INFO spawned: 'request-consumer' with pid 64
+2025-12-09 18:05:11,880 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:05:12,882 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-09 18:12:03,845 WARN received SIGQUIT indicating exit request
+2025-12-09 18:12:03,846 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:12:06,857 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:12:06,861 WARN stopped: crond (terminated by SIGTERM)
+2025-12-09 18:12:07,942 INFO stopped: php-fpmd (exit status 0)
+2025-12-09 18:12:09,096 INFO stopped: syslogd (exit status 0)
+2025-12-09 18:16:40,464 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 18:16:40,465 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 18:16:40,466 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 18:16:40,469 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 18:16:40,469 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 18:16:40,471 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 18:16:40,471 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 18:16:40,471 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 18:16:40,477 INFO RPC interface 'supervisor' initialized
+2025-12-09 18:16:40,478 INFO supervisord started with pid 1
+2025-12-09 18:16:41,481 INFO spawned: 'syslogd' with pid 38
+2025-12-09 18:16:41,483 INFO spawned: 'php-fpmd' with pid 39
+2025-12-09 18:16:41,484 INFO spawned: 'crond' with pid 40
+2025-12-09 18:16:41,486 INFO spawned: 'request-consumer' with pid 41
+2025-12-09 18:16:41,508 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:16:41,510 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:16:41,717 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:42,780 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:16:42,783 INFO spawned: 'request-consumer' with pid 60
+2025-12-09 18:16:44,001 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:16:44,001 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:45,007 INFO spawned: 'request-consumer' with pid 61
+2025-12-09 18:16:45,225 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:46,228 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 18:16:46,415 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:48,423 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 18:16:48,624 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:51,637 INFO spawned: 'request-consumer' with pid 64
+2025-12-09 18:16:51,825 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:16:52,829 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-09 18:21:11,440 WARN received SIGQUIT indicating exit request
+2025-12-09 18:21:11,446 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:21:14,458 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:21:14,461 WARN stopped: crond (terminated by SIGTERM)
+2025-12-09 18:21:15,518 INFO stopped: php-fpmd (exit status 0)
+2025-12-09 18:21:16,664 INFO stopped: syslogd (exit status 0)
+2025-12-09 18:21:17,289 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 18:21:17,290 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 18:21:17,293 INFO RPC interface 'supervisor' initialized
+2025-12-09 18:21:17,294 INFO supervisord started with pid 1
+2025-12-09 18:21:18,304 INFO spawned: 'syslogd' with pid 39
+2025-12-09 18:21:18,312 INFO spawned: 'php-fpmd' with pid 40
+2025-12-09 18:21:18,358 INFO spawned: 'crond' with pid 41
+2025-12-09 18:21:18,369 INFO spawned: 'request-consumer' with pid 42
+2025-12-09 18:21:18,447 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:21:18,448 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:21:18,747 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:19,763 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:21:19,770 INFO spawned: 'request-consumer' with pid 61
+2025-12-09 18:21:19,990 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:21,999 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 18:21:22,187 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:25,199 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 18:21:26,389 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:21:26,390 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:27,399 INFO spawned: 'request-consumer' with pid 64
+2025-12-09 18:21:27,581 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:28,592 INFO spawned: 'request-consumer' with pid 65
+2025-12-09 18:21:28,803 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:30,811 INFO spawned: 'request-consumer' with pid 66
+2025-12-09 18:21:30,989 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:34,004 INFO spawned: 'request-consumer' with pid 67
+2025-12-09 18:21:34,291 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:21:35,294 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-09 18:23:58,655 WARN received SIGQUIT indicating exit request
+2025-12-09 18:23:58,659 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:24:01,670 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:24:01,672 WARN stopped: crond (terminated by SIGTERM)
+2025-12-09 18:24:02,742 INFO stopped: php-fpmd (exit status 0)
+2025-12-09 18:24:03,874 INFO stopped: syslogd (exit status 0)
+2025-12-09 18:24:04,477 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 18:24:04,478 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 18:24:04,481 INFO RPC interface 'supervisor' initialized
+2025-12-09 18:24:04,482 INFO supervisord started with pid 1
+2025-12-09 18:24:05,490 INFO spawned: 'syslogd' with pid 39
+2025-12-09 18:24:05,494 INFO spawned: 'php-fpmd' with pid 40
+2025-12-09 18:24:05,499 INFO spawned: 'crond' with pid 41
+2025-12-09 18:24:05,503 INFO spawned: 'request-consumer' with pid 42
+2025-12-09 18:24:05,537 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:24:05,538 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:24:05,676 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:24:06,726 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:24:06,731 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 18:24:06,894 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:24:08,902 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 18:24:09,063 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:24:12,072 INFO spawned: 'request-consumer' with pid 64
+2025-12-09 18:24:12,237 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-09 18:24:13,239 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-09 18:25:24,409 WARN received SIGQUIT indicating exit request
+2025-12-09 18:25:24,412 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:25:27,418 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-09 18:25:27,420 WARN stopped: crond (terminated by SIGTERM)
+2025-12-09 18:25:27,451 INFO stopped: php-fpmd (exit status 0)
+2025-12-09 18:25:28,583 INFO stopped: syslogd (exit status 0)
+2025-12-09 18:25:29,172 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-09 18:25:29,172 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-09 18:25:29,172 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-09 18:25:29,173 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-09 18:25:29,173 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-09 18:25:29,173 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-09 18:25:29,173 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-09 18:25:29,173 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-09 18:25:29,176 INFO RPC interface 'supervisor' initialized
+2025-12-09 18:25:29,177 INFO supervisord started with pid 1
+2025-12-09 18:25:30,186 INFO spawned: 'syslogd' with pid 39
+2025-12-09 18:25:30,191 INFO spawned: 'php-fpmd' with pid 40
+2025-12-09 18:25:30,201 INFO spawned: 'crond' with pid 41
+2025-12-09 18:25:30,212 INFO spawned: 'request-consumer' with pid 42
+2025-12-09 18:25:30,242 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:25:30,246 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-09 18:25:30,461 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:25:31,472 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-09 18:25:31,477 INFO spawned: 'request-consumer' with pid 61
+2025-12-09 18:25:31,649 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:25:33,656 INFO spawned: 'request-consumer' with pid 62
+2025-12-09 18:25:33,837 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:25:36,849 INFO spawned: 'request-consumer' with pid 63
+2025-12-09 18:25:37,030 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-09 18:25:38,032 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 02:32:35,658 WARN received SIGQUIT indicating exit request
+2025-12-10 02:32:35,660 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 02:32:38,676 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 02:32:38,682 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 02:32:38,731 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 02:32:39,866 INFO stopped: syslogd (exit status 0)
+2025-12-10 02:32:40,458 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 02:32:40,459 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 02:32:40,463 INFO RPC interface 'supervisor' initialized
+2025-12-10 02:32:40,464 INFO supervisord started with pid 1
+2025-12-10 02:32:41,468 INFO spawned: 'syslogd' with pid 39
+2025-12-10 02:32:41,469 INFO spawned: 'php-fpmd' with pid 40
+2025-12-10 02:32:41,470 INFO spawned: 'crond' with pid 41
+2025-12-10 02:32:41,471 INFO spawned: 'request-consumer' with pid 42
+2025-12-10 02:32:41,491 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 02:32:41,492 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 02:32:42,735 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 02:32:42,736 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 02:32:42,737 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 02:32:43,746 INFO spawned: 'request-consumer' with pid 60
+2025-12-10 02:32:44,957 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 02:32:44,958 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 02:32:45,973 INFO spawned: 'request-consumer' with pid 61
+2025-12-10 02:32:47,182 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 02:32:47,183 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 02:32:48,207 INFO spawned: 'request-consumer' with pid 62
+2025-12-10 02:32:48,424 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 02:32:49,428 INFO spawned: 'request-consumer' with pid 63
+2025-12-10 02:32:49,664 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 02:32:51,669 INFO spawned: 'request-consumer' with pid 64
+2025-12-10 02:32:51,670 WARN received SIGQUIT indicating exit request
+2025-12-10 02:32:51,670 INFO waiting for syslogd, php-fpmd, crond, request-consumer to die
+2025-12-10 02:32:52,905 WARN stopped: request-consumer (exit status 255)
+2025-12-10 02:32:54,915 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 02:32:54,918 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 02:32:54,958 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 02:32:56,090 INFO stopped: syslogd (exit status 0)
+2025-12-10 03:30:27,581 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 03:30:27,582 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 03:30:27,583 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 03:30:27,588 INFO RPC interface 'supervisor' initialized
+2025-12-10 03:30:27,589 INFO supervisord started with pid 1
+2025-12-10 03:30:28,596 INFO spawned: 'syslogd' with pid 39
+2025-12-10 03:30:28,598 INFO spawned: 'php-fpmd' with pid 40
+2025-12-10 03:30:28,600 INFO spawned: 'crond' with pid 41
+2025-12-10 03:30:28,607 INFO spawned: 'request-consumer' with pid 42
+2025-12-10 03:30:28,628 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 03:30:28,629 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 03:30:29,240 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:30,242 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 03:30:30,243 INFO spawned: 'request-consumer' with pid 60
+2025-12-10 03:30:30,509 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:32,516 INFO spawned: 'request-consumer' with pid 61
+2025-12-10 03:30:32,744 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:35,753 INFO spawned: 'request-consumer' with pid 62
+2025-12-10 03:30:36,963 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 03:30:36,964 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:37,968 INFO spawned: 'request-consumer' with pid 63
+2025-12-10 03:30:38,199 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:39,205 INFO spawned: 'request-consumer' with pid 64
+2025-12-10 03:30:39,446 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:41,481 INFO spawned: 'request-consumer' with pid 65
+2025-12-10 03:30:41,696 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:44,705 INFO spawned: 'request-consumer' with pid 66
+2025-12-10 03:30:45,024 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 03:30:46,028 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 08:18:06,073 WARN received SIGQUIT indicating exit request
+2025-12-10 08:18:06,075 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 08:18:09,086 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 08:18:09,090 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 08:18:10,145 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 08:18:11,263 INFO stopped: syslogd (exit status 0)
+2025-12-10 09:36:29,888 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 09:36:29,891 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 09:36:29,895 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 09:36:29,895 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 09:36:29,895 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 09:36:29,895 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 09:36:29,895 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 09:36:29,896 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 09:36:29,913 INFO RPC interface 'supervisor' initialized
+2025-12-10 09:36:29,915 INFO supervisord started with pid 1
+2025-12-10 09:36:30,921 INFO spawned: 'syslogd' with pid 39
+2025-12-10 09:36:30,922 INFO spawned: 'php-fpmd' with pid 40
+2025-12-10 09:36:30,924 INFO spawned: 'crond' with pid 41
+2025-12-10 09:36:30,925 INFO spawned: 'request-consumer' with pid 42
+2025-12-10 09:36:30,960 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 09:36:30,960 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 09:36:32,372 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 09:36:32,372 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 09:36:32,373 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 09:36:33,376 INFO spawned: 'request-consumer' with pid 61
+2025-12-10 09:36:33,804 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 09:36:34,828 INFO spawned: 'request-consumer' with pid 62
+2025-12-10 09:36:35,523 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 09:36:37,529 INFO spawned: 'request-consumer' with pid 63
+2025-12-10 09:36:37,901 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 09:36:40,908 INFO spawned: 'request-consumer' with pid 64
+2025-12-10 09:36:41,278 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 09:36:42,280 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 10:13:35,424 WARN received SIGQUIT indicating exit request
+2025-12-10 10:13:35,430 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 10:13:38,439 INFO waiting for syslogd, php-fpmd, crond to die
+2025-12-10 10:13:38,442 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 10:13:38,485 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 10:13:39,615 INFO stopped: syslogd (exit status 0)
+2025-12-10 10:13:41,298 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 10:13:41,299 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 10:13:41,299 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/nginx.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 10:13:41,300 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 10:13:41,305 INFO RPC interface 'supervisor' initialized
+2025-12-10 10:13:41,306 INFO supervisord started with pid 1
+2025-12-10 10:13:42,312 INFO spawned: 'syslogd' with pid 49
+2025-12-10 10:13:42,315 INFO spawned: 'nginxd' with pid 50
+2025-12-10 10:13:42,317 INFO spawned: 'php-fpmd' with pid 51
+2025-12-10 10:13:42,321 INFO spawned: 'crond' with pid 52
+2025-12-10 10:13:42,324 INFO spawned: 'request-consumer' with pid 53
+2025-12-10 10:13:42,355 INFO success: nginxd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 10:13:42,355 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 10:13:42,355 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 10:13:42,753 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:43,756 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 10:13:43,759 INFO spawned: 'request-consumer' with pid 79
+2025-12-10 10:13:45,145 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 10:13:45,147 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:46,153 INFO spawned: 'request-consumer' with pid 80
+2025-12-10 10:13:46,584 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:47,590 INFO spawned: 'request-consumer' with pid 81
+2025-12-10 10:13:48,986 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 10:13:48,986 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:49,990 INFO spawned: 'request-consumer' with pid 82
+2025-12-10 10:13:50,376 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:51,380 INFO spawned: 'request-consumer' with pid 83
+2025-12-10 10:13:51,747 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:54,178 INFO spawned: 'request-consumer' with pid 84
+2025-12-10 10:13:54,883 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:57,894 INFO spawned: 'request-consumer' with pid 85
+2025-12-10 10:13:58,284 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 10:13:59,285 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 14:12:11,722 WARN received SIGQUIT indicating exit request
+2025-12-10 14:12:11,731 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:12:14,745 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:12:14,749 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 14:12:15,833 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 14:12:15,899 INFO stopped: nginxd (exit status 0)
+2025-12-10 14:12:17,048 INFO stopped: syslogd (exit status 0)
+2025-12-10 14:12:17,888 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/nginx.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 14:12:17,889 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 14:12:17,894 INFO RPC interface 'supervisor' initialized
+2025-12-10 14:12:17,894 INFO supervisord started with pid 1
+2025-12-10 14:12:18,904 INFO spawned: 'syslogd' with pid 50
+2025-12-10 14:12:18,911 INFO spawned: 'nginxd' with pid 51
+2025-12-10 14:12:18,917 INFO spawned: 'php-fpmd' with pid 52
+2025-12-10 14:12:18,919 INFO spawned: 'crond' with pid 53
+2025-12-10 14:12:18,921 INFO spawned: 'request-consumer' with pid 54
+2025-12-10 14:12:18,950 INFO success: nginxd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:12:18,950 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:12:18,950 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:12:19,234 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:20,238 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:12:20,246 INFO spawned: 'request-consumer' with pid 81
+2025-12-10 14:12:20,484 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:22,497 INFO spawned: 'request-consumer' with pid 82
+2025-12-10 14:12:22,733 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:25,742 INFO spawned: 'request-consumer' with pid 83
+2025-12-10 14:12:26,978 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:12:26,979 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:27,985 INFO spawned: 'request-consumer' with pid 84
+2025-12-10 14:12:28,218 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:29,224 INFO spawned: 'request-consumer' with pid 85
+2025-12-10 14:12:29,462 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:31,470 INFO spawned: 'request-consumer' with pid 86
+2025-12-10 14:12:31,698 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:34,708 INFO spawned: 'request-consumer' with pid 87
+2025-12-10 14:12:34,943 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:12:35,946 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 14:13:56,120 WARN received SIGQUIT indicating exit request
+2025-12-10 14:13:56,121 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:13:59,131 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:13:59,133 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 14:13:59,164 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 14:13:59,207 INFO stopped: nginxd (exit status 0)
+2025-12-10 14:14:00,325 INFO stopped: syslogd (exit status 0)
+2025-12-10 14:14:01,018 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/nginx.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 14:14:01,019 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 14:14:01,022 INFO RPC interface 'supervisor' initialized
+2025-12-10 14:14:01,023 INFO supervisord started with pid 1
+2025-12-10 14:14:02,031 INFO spawned: 'syslogd' with pid 50
+2025-12-10 14:14:02,035 INFO spawned: 'nginxd' with pid 51
+2025-12-10 14:14:02,037 INFO spawned: 'php-fpmd' with pid 52
+2025-12-10 14:14:02,040 INFO spawned: 'crond' with pid 53
+2025-12-10 14:14:02,045 INFO spawned: 'request-consumer' with pid 54
+2025-12-10 14:14:02,075 INFO success: nginxd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:14:02,077 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:14:02,079 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:14:02,332 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:03,335 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:03,338 INFO spawned: 'request-consumer' with pid 80
+2025-12-10 14:14:03,577 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:05,585 INFO spawned: 'request-consumer' with pid 81
+2025-12-10 14:14:06,832 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:06,833 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:07,840 INFO spawned: 'request-consumer' with pid 82
+2025-12-10 14:14:09,083 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:09,084 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:10,088 INFO spawned: 'request-consumer' with pid 83
+2025-12-10 14:14:11,312 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:11,313 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:12,320 INFO spawned: 'request-consumer' with pid 84
+2025-12-10 14:14:12,554 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:13,559 INFO spawned: 'request-consumer' with pid 85
+2025-12-10 14:14:13,790 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:15,796 INFO spawned: 'request-consumer' with pid 86
+2025-12-10 14:14:16,023 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:19,033 INFO spawned: 'request-consumer' with pid 87
+2025-12-10 14:14:20,272 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:20,273 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:21,280 INFO spawned: 'request-consumer' with pid 88
+2025-12-10 14:14:22,517 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:22,519 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:23,525 INFO spawned: 'request-consumer' with pid 89
+2025-12-10 14:14:24,763 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:24,765 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:25,771 INFO spawned: 'request-consumer' with pid 90
+2025-12-10 14:14:27,004 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:27,006 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:28,012 INFO spawned: 'request-consumer' with pid 91
+2025-12-10 14:14:29,254 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:14:29,255 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:30,262 INFO spawned: 'request-consumer' with pid 92
+2025-12-10 14:14:30,497 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:31,502 INFO spawned: 'request-consumer' with pid 93
+2025-12-10 14:14:31,730 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:33,739 INFO spawned: 'request-consumer' with pid 94
+2025-12-10 14:14:33,974 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:36,988 INFO spawned: 'request-consumer' with pid 95
+2025-12-10 14:14:37,232 WARN exited: request-consumer (exit status 255; not expected)
+2025-12-10 14:14:38,235 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
+2025-12-10 14:16:00,410 WARN received SIGQUIT indicating exit request
+2025-12-10 14:16:00,412 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:16:03,419 INFO waiting for syslogd, nginxd, php-fpmd, crond to die
+2025-12-10 14:16:03,422 WARN stopped: crond (terminated by SIGTERM)
+2025-12-10 14:16:03,454 INFO stopped: php-fpmd (exit status 0)
+2025-12-10 14:16:03,498 INFO stopped: nginxd (exit status 0)
+2025-12-10 14:16:04,618 INFO stopped: syslogd (exit status 0)
+2025-12-10 14:16:05,304 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/consumer.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/cron.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/dnsmasq.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/nginx.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/php-fpm.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/postfix.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/ssh.conf" during parsing
+2025-12-10 14:16:05,305 INFO Included extra file "/opt/docker/etc/supervisor.d/syslog.conf" during parsing
+2025-12-10 14:16:05,308 INFO RPC interface 'supervisor' initialized
+2025-12-10 14:16:05,308 INFO supervisord started with pid 1
+2025-12-10 14:16:06,317 INFO spawned: 'syslogd' with pid 47
+2025-12-10 14:16:06,321 INFO spawned: 'nginxd' with pid 48
+2025-12-10 14:16:06,324 INFO spawned: 'php-fpmd' with pid 49
+2025-12-10 14:16:06,328 INFO spawned: 'crond' with pid 50
+2025-12-10 14:16:06,334 INFO spawned: 'request-consumer' with pid 51
+2025-12-10 14:16:06,358 INFO success: nginxd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:16:06,359 INFO success: php-fpmd entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:16:06,360 INFO success: crond entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2025-12-10 14:16:06,809 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:07,812 INFO success: syslogd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:16:07,815 INFO spawned: 'request-consumer' with pid 77
+2025-12-10 14:16:08,089 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:10,093 INFO spawned: 'request-consumer' with pid 78
+2025-12-10 14:16:10,351 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:13,359 INFO spawned: 'request-consumer' with pid 79
+2025-12-10 14:16:14,647 INFO success: request-consumer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-12-10 14:16:14,648 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:15,655 INFO spawned: 'request-consumer' with pid 80
+2025-12-10 14:16:15,931 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:16,937 INFO spawned: 'request-consumer' with pid 81
+2025-12-10 14:16:17,244 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:19,253 INFO spawned: 'request-consumer' with pid 82
+2025-12-10 14:16:19,550 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:22,559 INFO spawned: 'request-consumer' with pid 83
+2025-12-10 14:16:22,832 WARN exited: request-consumer (exit status 1; not expected)
+2025-12-10 14:16:23,835 INFO gave up: request-consumer entered FATAL state, too many start retries too quickly
