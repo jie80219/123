@@ -16,9 +16,11 @@ class HeartBeat extends BaseController
     {
         return $this->response
             ->setStatusCode(200)
-            ->setJSON([
-                'status' => 200,
-                'msg'    => 'AnserGateway is lived.',
-            ]);
+            ->setBody(view('heartbeat', [
+                'msg'  => 'EventGateway is Online.',
+                'time' => date('Y-m-d H:i:s'),
+                'env'  => ENVIRONMENT,
+            ]))
+            ->setContentType('text/html');
     }
 }

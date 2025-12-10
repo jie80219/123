@@ -32,7 +32,7 @@ abstract class BaseController extends Controller
      * @param LoggerInterface $logger
      */
     public function initController(
-        IncomingRequest $request,
+        \CodeIgniter\HTTP\RequestInterface $request,
         ResponseInterface $response,
         LoggerInterface $logger
     ): void {
