@@ -1,12 +1,17 @@
 <?php
-
 require_once __DIR__ . '/../../vendor/autoload.php'; // 修正 autoload路徑
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
-use App\Orchestrators\CreateOrderOrchestrator; 
+use App\Orchestrators\CreateOrderOrchestrator;
+
+// 讀取連線設定（優先環境變數，方便本機/容器共用）
+$rabbitHost = getenv('RABBITMQ_HOST') ?: 'localhost';
+$rabbitPort = (int) (getenv('RABBITMQ_PORT') ?: 5672);
+$rabbitUser = getenv('RABBITMQ_USER') ?: 'guest';
+$rabbitPass = getenv('RABBITMQ_PASS') ?: 'guest';
 
 // 1. 連接 RabbitMQ
-$connection = new AMQPStreamConnection('rabbitmq', 5672, 'user', 'password');
+$connection = new AMQPStreamConnection($rabbitHost, $rabbitPort, $rabbitUser, $rabbitPass);
 $channel = $connection->channel();
 
 $channel->queue_declare('order_queue', false, true, false, false);
@@ -25,11 +30,9 @@ $callback = function ($msg) {
     // 這裡是你將 Gateway 納入 EDA 的關鍵
     try {
         $orchestrator = new CreateOrderOrchestrator();
-        
-        // TODO: Anser 需要能接受並透傳 traceId (這部分是你的研究重點)
-        // $orchestrator->setTraceId($traceId); 
 
-        $result = $orchestrator->build($orderData)->start();
+        // 將 traceId 傳入 orchestrator 編號，便於追蹤
+        $result = $orchestrator->build($orderData, $traceId)->run();
 
         if ($result->isSuccess()) {
             echo " [v] Saga Completed. TraceID: $traceId\n";
