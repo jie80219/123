@@ -14,6 +14,8 @@ class HeartBeat extends BaseController
      */
     public function index(): ResponseInterface
     {
+        $session = session();
+        $session->set('eg_test', 'ok');
         return $this->response
             ->setStatusCode(200)
             ->setBody(view('heartbeat', [
@@ -23,4 +25,5 @@ class HeartBeat extends BaseController
             ]))
             ->setContentType('text/html');
     }
+    
 }

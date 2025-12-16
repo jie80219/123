@@ -53,7 +53,7 @@ class InitRabbitMQ extends BaseCommand
             // 佇列清單
             $queues = [
                 'request' => 'anser_request_queue',       // Gateway 入口緩衝
-                'order'   => 'service_order_queue',       // Order Service
+                'order'   => 'service_request_queue',       // Order Service
                 'payment' => 'service_payment_queue',     // Payment Service
                 'reply'   => 'anser_saga_reply_queue',    // Saga Reply
             ];

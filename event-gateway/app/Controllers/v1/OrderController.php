@@ -40,11 +40,13 @@ class OrderController extends BaseController
             $channel = $connection->channel();
 
             // 4. 宣告佇列 (確保佇列存在)
-            $channel->queue_declare('order_queue', false, true, false, false);
+            $queueName = env('REQUEST_QUEUE', 'request_queue');
+
+            $channel->queue_declare($queueName, false, true, false, false);
 
             // 5. 發送訊息
             $msg = new AMQPMessage($eventPayload, ['delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]);
-            $channel->basic_publish($msg, '', 'order_queue');
+            $channel->basic_publish($msg, '', $queueName);
 
             $channel->close();
             $connection->close();

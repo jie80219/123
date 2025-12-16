@@ -14,7 +14,9 @@ $rabbitPass = getenv('RABBITMQ_PASS') ?: 'guest';
 $connection = new AMQPStreamConnection($rabbitHost, $rabbitPort, $rabbitUser, $rabbitPass);
 $channel = $connection->channel();
 
-$channel->queue_declare('order_queue', false, true, false, false);
+$queueName = getenv('REQUEST_QUEUE') ?: 'request_queue';
+
+$channel->queue_declare($queueName, false, true, false, false);
 
 echo " [*] Worker started. Waiting for messages...\n";
 
@@ -48,7 +50,7 @@ $callback = function ($msg) {
 };
 
 $channel->basic_qos(null, 1, null);
-$channel->basic_consume('order_queue', '', false, false, false, false, $callback);
+$channel->basic_consume($queueName, '', false, false, false, false, $callback);
 
 while ($channel->is_consuming()) {
     $channel->wait();

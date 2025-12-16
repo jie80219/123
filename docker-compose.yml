@@ -65,6 +65,9 @@ services:
       - SERVICE_ROLE=web
       - RABBITMQ_HOST=anser_rabbitmq
       - REDIS_HOST=anser_redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - REDIS_PASSWORD=
       - CONSUL_HOST=anser_consul
       - EVENTSTORE_HOST=anser_eventstore
     depends_on:
@@ -87,9 +90,12 @@ services:
       - SERVICE_ROLE=worker
       - RABBITMQ_HOST=anser_rabbitmq
       - REDIS_HOST=anser_redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - REDIS_PASSWORD=
       - CONSUL_HOST=anser_consul
       - EVENTSTORE_HOST=anser_eventstore
-    command: php /app/spark queue:listen
+    command: php /app/app/Workers/RequestConsumer.php
     depends_on:
       - rabbitmq
       - app  # [修改點] 這裡必須指向新的服務名稱 app
