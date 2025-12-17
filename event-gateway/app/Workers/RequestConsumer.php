@@ -1,51 +1,64 @@
 <?php
-require_once __DIR__ . '/../../vendor/autoload.php'; // 修正 autoload路徑
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
-use App\Orchestrators\CreateOrderOrchestrator;
+use SDPMlab\AnserEDA\EventBus;
+use SDPMlab\AnserEDA\MessageQueue\MessageBus;
+use SDPMlab\AnserEDA\EventStore\EventStoreDB;
+use App\Events\OrderCreateRequestedEvent;
+use App\Handlers\OrderCreateHandler;
 
-// 讀取連線設定（優先環境變數，方便本機/容器共用）
+// RabbitMQ 連線資訊
 $rabbitHost = getenv('RABBITMQ_HOST') ?: 'localhost';
 $rabbitPort = (int) (getenv('RABBITMQ_PORT') ?: 5672);
 $rabbitUser = getenv('RABBITMQ_USER') ?: 'guest';
 $rabbitPass = getenv('RABBITMQ_PASS') ?: 'guest';
 
-// 1. 連接 RabbitMQ
+// EventStoreDB 連線資訊（若未設置，採預設帳密）
+$eventStoreHost = getenv('EVENTSTORE_HOST') ?: 'localhost';
+$eventStorePort = (int) (getenv('EVENTSTORE_HTTP_PORT') ?: 2113);
+$eventStoreUser = getenv('EVENTSTORE_USER') ?: 'admin';
+$eventStorePass = getenv('EVENTSTORE_PASS') ?: 'changeit';
+
+// 建立連線
 $connection = new AMQPStreamConnection($rabbitHost, $rabbitPort, $rabbitUser, $rabbitPass);
 $channel = $connection->channel();
-
 $queueName = getenv('REQUEST_QUEUE') ?: 'request_queue';
-
 $channel->queue_declare($queueName, false, true, false, false);
 
-echo " [*] Worker started. Waiting for messages...\n";
+// 建立 EventBus 依賴
+$messageBus = new MessageBus($channel);
+$eventStoreDB = new EventStoreDB($eventStoreHost, $eventStorePort, $eventStoreUser, $eventStorePass);
+$eventBus = new EventBus($messageBus, $eventStoreDB);
 
-// 2. 定義回調函數
-$callback = function ($msg) {
-    echo ' [x] Received ', $msg->body, "\n";
+// --- [初始化區] 註冊事件與 Handler 的對應關係 ---
+$eventBus->registerHandler(
+    OrderCreateRequestedEvent::class,
+    [new OrderCreateHandler(), 'handle']
+);
+// ---------------------------------------------
+
+echo " [*] Worker started (Event-Driven Mode). Waiting...\n";
+
+$callback = function ($msg) use ($eventBus) {
+    echo ' [x] Received Raw Message', "\n";
     
     $payload = json_decode($msg->body, true);
     $traceId = $payload['id'] ?? 'unknown';
-    $orderData = $payload['data'];
+    $orderData = $payload['data'] ?? [];
 
-    // 3. 呼叫 Anser-EDA 的 Orchestrator (Saga)
-    // 這裡是你將 Gateway 納入 EDA 的關鍵
     try {
-        $orchestrator = new CreateOrderOrchestrator();
+        // 建立事件並丟入 EventBus
+        $event = new OrderCreateRequestedEvent($traceId, $orderData);
+        $eventBus->dispatch($event);
 
-        // 將 traceId 傳入 orchestrator 編號，便於追蹤
-        $result = $orchestrator->build($orderData, $traceId)->run();
+        echo " [v] Event Dispatched Successfully.\n";
+        $msg->ack(); // 只要事件發送成功，我們就視為 Queue 任務完成
 
-        if ($result->isSuccess()) {
-            echo " [v] Saga Completed. TraceID: $traceId\n";
-            $msg->ack(); // 確認消費成功
-        } else {
-            echo " [!] Saga Failed. Executing Compensation...\n";
-            $msg->ack(); // 即使失敗，Saga 已處理補償，故可視為消費完成 (或視需求重試)
-        }
     } catch (Exception $e) {
-        echo " [Error] " . $e->getMessage() . "\n";
-        $msg->nack(true); // 系統錯誤則退回佇列
+        echo " [!] System Error: " . $e->getMessage() . "\n";
+        // 如果是 Handler 拋出的錯誤，代表 Saga 連啟動都失敗，或者需要重試
+        $msg->nack(true); 
     }
 };
 

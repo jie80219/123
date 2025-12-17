@@ -1,4 +1,5 @@
 event-gateway/vendor/
+/event-gateway/src/vendor/
 /.env
 /writable/*
 .php-cs-fixer.cache
@@ -7,3 +8,5 @@ event-gateway/vendor/
 .phpunit.cache
 writable/logs/*
 writable/logs/*.log
+event-gateway/writable/**
+writable/**

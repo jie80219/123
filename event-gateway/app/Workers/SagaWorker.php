@@ -30,17 +30,18 @@ class SagaWorker extends BaseCommand
                     
                     // 初始化 Orchestrator (Anser-EDA 核心)
                     $orchestrator = new CreateOrderOrchestrator();
-                    
+
                     // 傳入資料並開始執行
-                    $result = $orchestrator->build($job['payload'], $job['requestId'])->run();
-                    
-                    if ($result->isSuccess()) {
-                         CLI::write(" [v] Saga Completed: " . $job['requestId'], 'green');
-                         $msg->ack(); // 成功才 Ack
+                    $result = $orchestrator->build($job['payload'], $job['requestId']);
+                    $isSuccess = is_array($result) ? ($result['success'] ?? false) : (bool) $result;
+
+                    if ($isSuccess) {
+                        CLI::write(" [v] Saga Completed: " . $job['requestId'], 'green');
+                        $msg->ack(); // 成功才 Ack
                     } else {
-                         CLI::write(" [!] Saga Failed (Rollback executed).", 'red');
-                         // 根據策略決定是否 Ack 或進入 Dead Letter Queue
-                         $msg->ack(); 
+                        CLI::write(" [!] Saga Failed (Rollback executed).", 'red');
+                        // 根據策略決定是否 Ack 或進入 Dead Letter Queue
+                        $msg->ack(); 
                     }
                 }
             } catch (\Exception $e) {
